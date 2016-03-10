@@ -7,10 +7,10 @@ end
         if not is_momod or not is_owner then
     return "فقط اونر ها (owner( مجاز به این کار اند :|"
 end
-    local user = 'user#154594165'
+    local user = 'user#143143041'
     local chat = 'chat#id'..msg.to.id
     chat_add_user(chat, user, callback, false)
-    return "√Y added to : "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
+    return "√X added to : "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
 end
 return {
     patterns ={
