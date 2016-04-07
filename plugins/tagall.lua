@@ -26,10 +26,10 @@ end
 return {
   description = "صدا کردن افراد و نمایش یک پیام",
   usage = {
-    "تگ [msg]."
+    "tag [msg]."
   },
   patterns = {
-    "^تگ +(.+)$"
+    "^tag +(.+)$"
   },
   run = run
 }
