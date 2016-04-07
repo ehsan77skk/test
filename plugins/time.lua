@@ -95,6 +95,6 @@ end
 return {
   description = "دریافت زمان منطقه", 
   usage = "زمان [area]: زمان منطقه جغرافیایی",
-  patterns = {"^زمان (.*)$"}, 
+  patterns = {"^time (.*)$"}, 
   run = run
 }
