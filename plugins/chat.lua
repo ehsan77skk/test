@@ -17,26 +17,26 @@ end
 if msg.text == "salam" then
 	return "va aleykol asalam"
 end
-if msg.text == "zac" then
-	return "Nagaeedim"
+if msg.text == "kir" then
+	return "too koonet"
 end
-if msg.text == "Zac" then
-	return "Nagaeedim"
-end
-if msg.text == "Sbss" then
-	return "Is the best"
+if msg.text == "رادیکال" then
+	return "بابامو چیکار داری?"
 end
 if msg.text == "Sbss" then
 	return "Is the best"
 end
-if msg.text == "SBSS" then
-	return "Jnm?"
+if msg.text == "😐" then
+	return "😐"
 end
-if msg.text == "bot" then
-	return "hum?"
+if msg.text == "رادیکال" then
+	return "بابامو چیکار داری?"
 end
-if msg.text == "Bot" then
-	return "Huuuum?"
+if msg.text == "Slm" then
+	return "میمیری مثل ادم سلام کنی?"
+end
+if msg.text == "slm" then
+	return "میمیری مثل ادم سلام کنی?"
 end
 if msg.text == "?" then
 	return "خسته نمیشی اینقد سوال میپرسی؟"
@@ -50,11 +50,11 @@ end
 if msg.text == "سلام" then
 	return "علیـک"
 end
-if msg.text == "slm" then
-	return "سلام"
+if msg.text == "یلو" then
+	return "با بابام چیکار داری?"
 end
-if msg.text == "Slm" then
-	return "سلام"
+if msg.text == "یلو" then
+	return "با بابام چیکار داری?"
 end
 if msg.text == "بای" then
 	return "اودافظ"
@@ -62,12 +62,27 @@ end
 if msg.text == "خدافظ" then
 	return "Bye Bye"
 end
-if msg.text == "Mr Ahs" then
+if msg.text == "کیر" then
+	return "بیا بخور"
+end
+if msg.text == "@sina7sk" then
 	return "چیکار داری بابامو؟"
 end
-if msg.text == "@Mr_Ah_s" then
-	return "چیکار داری بابامو؟"
+if msg.text == "😐😐" then
+	return "😐"
 end
+if msg.text == "😐😐😐" then
+	return "😐"
+end
+if msg.text == "😐😐😐😐" then
+	return "😐"
+end
+if msg.text == "😐😐😐😐😐" then
+	return "😐"
+end
+if msg.text == "radical" then
+	return "بابا جونم رو چیکار داری؟" then
+		end
 end
 
 return {
@@ -76,20 +91,25 @@ return {
 	patterns = {
 		"^[Hh]i$",
 		"^[Hh]ello$",
-		"^[Zz]ac$",
+		"^[Kk]ir$",
 		"^سلام$",
-		"^[Bb]ot$",
+		"^[Ss]lm$",
 		"^[Uu]mbrella$",
 		"^[Bb]ye$",
 		"^?$",
 		"^[Ss]alam$",
-		"^@Mr_Ah_S$",
-		"^Mr Ahs$",
+		"^@sina7sk$",
+		"^کیر$",
 		"^خدافظ$",
 		"^بای$",
-		"^[Ss]lm$",
-		"^SBSS$",
-		"^[Ss]bss$",
+		"^یلو$",
+		"^رادیکال$",
+		"^😐$",
+		"^😐😐$",
+		"^😐😐😐$",
+		"^😐😐😐😐$",
+		"^😐😐😐😐😐$",
+		"^radical$",
 		}, 
 	run = run,
     --privileged = true,
