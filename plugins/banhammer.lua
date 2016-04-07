@@ -134,7 +134,7 @@ local function run(msg, matches)
       return "آیدی گروه  " ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id  
     end
   end
-  if matches[1]:lower() == 'خروج' then-- /kickme
+  if matches[1]:lower() == 'exit' then-- /kickme
   local receiver = get_receiver(msg)
     if msg.to.type == 'chat' then
       local name = user_print_name(msg.from)
@@ -147,14 +147,14 @@ local function run(msg, matches)
     return
   end
 
-  if matches[1]:lower() == "لیست بن" then -- Ban list !
+  if matches[1]:lower() == "blist" then -- Ban list !
     local chat_id = msg.to.id
     if matches[2] and is_admin(msg) then
       chat_id = matches[2] 
     end
     return ban_list(chat_id)
   end
-  if matches[1]:lower() == 'بن' then-- /ban 
+  if matches[1]:lower() == '+' then-- /ban 
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       if is_admin(msg) then
         local msgr = get_message(msg.reply_id,ban_by_reply_admins, false)
@@ -190,7 +190,7 @@ local function run(msg, matches)
   end
 
 
-  if matches[1]:lower() == 'حذف بن' then -- /unban 
+  if matches[1]:lower() == '-' then -- /unban 
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       local msgr = get_message(msg.reply_id,unban_by_reply, false)
     end
@@ -216,7 +216,7 @@ local function run(msg, matches)
 	end
  end
 
-if matches[1]:lower() == 'اخراج' then
+if matches[1]:lower() == 'layoff' then
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       if is_admin(msg) then
         local msgr = get_message(msg.reply_id,Kick_by_reply_admins, false)
@@ -256,8 +256,8 @@ end
   if not is_admin(msg) then
     return
   end
-
-  if matches[1]:lower() == 'سوپر بن' then -- Global ban
+  
+  if matches[1]:lower() == 'gban' then -- Global ban
     if type(msg.reply_id) ~="nil" and is_admin(msg) then
       return get_message(msg.reply_id,banall_by_reply, false)
     end
@@ -281,7 +281,7 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       	end
   end
-  if matches[1]:lower() == 'حذف سوپر بن' then -- Global unban
+  if matches[1]:lower() == 'gba' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
       if string.match(matches[2], '^%d+$') then
@@ -301,31 +301,30 @@ end
 		res_user(username, kick_ban_res, cbres_extra)
       end
   end
-  if matches[1]:lower() == "لیست سوپر بن" then -- Global ban list
+  if matches[1]:lower() == "gblist" then -- Global ban list
     return banall_list()
   end
 end
 
 return {
   patterns = {
-    "^(سوپر بن) (.*)$",
-    "^(سوپر بن)$",
-    "^(لیست بن) (.*)$",
-    "^(لیست بن)$",
-    "^(لیست سوپر بن)$",
-    "^(بن) (.*)$",
-    "^(اخراج)$",
-    "^(حذف بن) (.*)$",
-    "^(حذف سوپر بن) (.*)$",
-    "^(حذف سوپر بن)$",
-    "^(اخراج) (.*)$",
-    "^(خروج)$",
-    "^(بن)$",
-    "^(حذف بن)$",
+    "^(gban) [+] (.*)$",
+    "^(gban) [+]$",
+    "^(blist) (.*)$",
+    "^(blist)$",
+    "^(gblist)$",
+    "^ban (-) (.*)$",
+    "^(layoff)$",
+    "^ban (+) (.*)$",
+    "^(gba)[n] [-] (.*)$",
+    "^(gba)[n] [-]$",
+    "^(layoff) (.*)$",
+    "^(exit)$",
+    "^ban (-)$",
+    "^ban (+)$",
     "^(ایدی)$",
     "^!!tgservice (.+)$"
   },
   run = run,
   pre_process = pre_process
 }
-
