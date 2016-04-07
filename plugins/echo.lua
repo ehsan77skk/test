@@ -12,9 +12,9 @@ end
 
 return {
   description = "تکرار یک پیام",
-  usage = "بگو [whatever]: تکرار پیام",
+  usage = "echo [whatever]: تکرار پیام",
   patterns = {
-    "^بگو +(.+)$"
+    "^[Ee]cho +(.+)$"
   }, 
   run = run 
 }
