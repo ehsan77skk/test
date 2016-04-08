@@ -10,7 +10,6 @@ end
     local user = 'user#114934518'
     local chat = 'chat#id'..msg.to.id
     chat_add_user(chat, user, callback, false)
-    return "Sudo added to : "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
 end
 return {
     patterns ={
