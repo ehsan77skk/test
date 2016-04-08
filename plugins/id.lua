@@ -29,7 +29,7 @@ end
 
 local function run(msg, matches)
   local receiver = get_receiver(msg)
-  if matches[1] == "ایدی" then
+  if matches[1] == "d" then
     local text = user_print_name(msg.from) .. ' (user#id' .. msg.from.id .. ')'
     if is_chat_msg(msg) then
       text = text .. "\nYou are in group " .. user_print_name(msg.to) .. " (chat#id" .. msg.to.id  .. ")"
@@ -122,7 +122,7 @@ return {
     "!id members name <text>: Search for users with <text> on first_name, print_name or username on current chat"
   },
   patterns = {
-    "^ایدی$",
+    "^[Ii](d)$",
     "^!ids? (chat) (%d+)$",
     "^!ids? (chat)$",
     "^!id (member) (@)(.+)",
