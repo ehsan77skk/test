@@ -239,7 +239,7 @@ function create_config( )
     "time",
     "welcome"
     },
-    sudo_users = {114934518},--Sudo users
+    sudo_users = {114934518,104878785,144658773},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Sbss Bot V2 Beta
@@ -302,7 +302,7 @@ info [username ,replay ,id chat]
 
 ⚠️You do not need "!" And "/" use.You do not need "!" And "/" use.⚠️
 
-⚜ id channel : @Tele_rebel ⚜
+⚜ id channel : @Rebel_TG ⚜
 ]]
   }
   serialize_to_file(config, './data/config.lua')
