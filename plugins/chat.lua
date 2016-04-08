@@ -69,20 +69,11 @@ if msg.text == "@sina7sk" then
 	return "چیکار داری بابامو؟"
 end
 if msg.text == "😐😐" then
-	return "😐"
+	return "😐😐"
 end
 if msg.text == "😐😐😐" then
-	return "😐"
+	return "😐😐😐"
 end
-if msg.text == "😐😐😐😐" then
-	return "😐"
-end
-if msg.text == "😐😐😐😐😐" then
-	return "😐"
-end
-if msg.text == "radical" then
-	return "بابا جونم رو چیکار داری؟" then
-		end
 end
 
 return {
@@ -107,9 +98,6 @@ return {
 		"^😐$",
 		"^😐😐$",
 		"^😐😐😐$",
-		"^😐😐😐😐$",
-		"^😐😐😐😐😐$",
-		"^radical$",
 		}, 
 	run = run,
     --privileged = true,
