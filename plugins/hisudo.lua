@@ -11,7 +11,7 @@ end
 end
 return {
 patterns = {
-    "^[Ss]alam$",
+    "^salam$",
     "^سلام$"
 },
 run = run
