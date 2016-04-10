@@ -14,9 +14,6 @@ end
 if msg.text == "Salam" then
 	return "Salam aleykom"
 end
-if msg.text == "salam" then
-	return "va aleykol asalam"
-end
 if msg.text == "kir" then
 	return "too koonet"
 end
@@ -46,9 +43,6 @@ if msg.text == "Bye" then
 end
 if msg.text == "bye" then
 	return "Bye Bye"
-end
-if msg.text == "سلام" then
-	return "علیـک"
 end
 if msg.text == "یلو" then
 	return "با بابام چیکار داری?"
