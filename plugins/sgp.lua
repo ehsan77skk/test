@@ -5,18 +5,18 @@ local mina = 114934518
     local value = redis:hget(hash, msg.from.id)
      if not value then
         if msg.from.id == tonumber(mina) then 
-           text = text..'سلام بابایی\n\n'
+           text = text..'سلام بابایی😘\n\n'
          elseif is_admin2(msg.from.id) then
-           text = text..'سلام \n\n'
+           text = text..'علیک \n\n'
          elseif is_owner2(msg.from.id, msg.to.id) then
-           text = text..'سلام \n\n'
+           text = text..'علیک \n\n'
          elseif is_momod2(msg.from.id, msg.to.id) then
-           text = text..'سلام \n'
+           text = text..'علیک \n'
      else
-           text = text..'سلام\n\n'
+           text = text..'علیک\n\n'
       end
       else
-       text = text..'سلام '..value..'  \n\n'
+       text = text..'علیک'..value..'  \n\n'
      end
 return text
     
@@ -26,7 +26,6 @@ return {
   patterns = {
 
 
-"^[Ss]lm$",
 "^سلام$",
 "^salam",
 
