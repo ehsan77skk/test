@@ -1,21 +1,29 @@
 do
 
+
 function run(msg, matches)
-  if matches[1]:lower() == 'sbss' then -- Put everything you like :)
+
+  if matches[1]:lower() == 'rebeltg' then -- Put everything you like :)
+
     send_document(get_receiver(msg), "./files/sticker.webp", ok_cb, false)
-    return 'test'
+
+    return 'Rebel Bot V1 Beta/n📄Developer :/n@sina7sk/n👥Manager :/n@yellowhat_IDeactive/n@sina7sk/n💡Founder :/n@sina7sk/n@yellowhat_IDeactive/n➖➖➖/n🎗Special Thank To:/n@Amirho3inf '
+
   end
-end
-return {
-  patterns = {
-    "^[Ss][Bb][Ss][Ss]$"
-  }, 
-  run = run 
-}
 
 end
---Made a folder names files
---upload a picture with webp format
---change file name to sticker.webp
---enjoy
---special thank to mehr pouya and gamer team
+
+return {
+
+  patterns = {
+
+    "^[Rr][Ee][Bb][Ee][Ll][Tt][Gg]$"
+
+  }, 
+
+  run = run 
+
+}
+
+
+end
