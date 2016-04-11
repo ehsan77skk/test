@@ -1,20 +1,34 @@
-do
+local function run(msg, matches)
+local mina = 114934518
+  local hash = 'rank:variables'
+  local text = ''
+    local value = redis:hget(hash, msg.from.id)
+     if not value then
+        if msg.from.id == tonumber(mina) then 
+           text = text..'سلام بابایی جونم😍\n\n'
+         elseif is_admin2(msg.from.id) then
+           text = text..'علیک \n\n'
+         elseif is_owner2(msg.from.id, msg.to.id) then
+           text = text..'علیک \n\n'
+         elseif is_momod2(msg.from.id, msg.to.id) then
+           text = text..'علیک \n'
+     else
+           text = text..'علیک\n\n'
+      end
+      else
+       text = text..'علیک '..value..'  \n\n'
+     end
+return text
+    
+end
 
-function run(msg, matches)
-local reply_id = msg['id']
-local text = 'سلام بابایی جونم😍'
-if matches[1] == 'salam' or 'سلام' then
-    if is_sudo(msg) then
-reply_msg(reply_id, text, ok_cb, false)
-end
-end 
-end
 return {
-patterns = {
-    "^salam$",
-    "^سلام$"
-},
-run = run
-}
+  patterns = {
 
-end
+
+"^سلام$",
+"^salam",
+
+  }, 
+  run = run 
+}
